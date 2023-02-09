@@ -19,3 +19,8 @@
 
 ***Všechno zvýrazněné a italické.***
 
+<sub>This is a subsript text</sub>
+
+<sup>This is a superscript text<sup/>
+  
+  
