@@ -73,4 +73,4 @@ report "Input combination b=1000, a=1100 FAILED" severity error;
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/x/Fpf2...]
+   [https://www.edaplayground.com/x/Fpf2]
