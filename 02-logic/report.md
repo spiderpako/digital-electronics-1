@@ -6,11 +6,11 @@
 
    Greater than:
 
-   [02-logic/kmap_greater than.png](https://github.com/spiderpako/digital-electronics-1/blob/c804cdffbb1e87304cb3f50f32d78547aade3529/02-logic/kmap_greater%20than.png)
+   (https://github.com/spiderpako/digital-electronics-1/blob/main/02-logic/kmap_greater%20than.png)
 
    Less than:
 
-   [02-logic/kmap_less than.png](https://github.com/spiderpako/digital-electronics-1/blob/c804cdffbb1e87304cb3f50f32d78547aade3529/02-logic/kmap_less%20than.png)
+  (https://github.com/spiderpako/digital-electronics-1/blob/main/02-logic/kmap_less%20than.png)
 
 2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
@@ -20,7 +20,7 @@
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
 
-   Last two digits of my student ID: **xxxx??**
+   Last two digits of my student ID: **240 198??**
 
 ```vhdl
     p_stimulus : process
@@ -29,8 +29,8 @@
         report "Stimulus process started";
 
         -- Test case of ID
-        s_b <= "1001"; -- 240 198 - BCD of 9
-        s_a <= "1000"; -- 240 198 - BCD of 8
+        s_b <= "1001"; -- 240 198 -> 1001 - BCD of 9
+        s_a <= "1000"; -- 240 198 -> 1000 - BCD of 8
         wait for 100 ns;
         
         -- ... and its expected outputs        
