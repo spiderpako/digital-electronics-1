@@ -1,4 +1,4 @@
-# Lab 2: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 2: Jakub Raimr
 
 ### 2-bit comparator
 
@@ -28,23 +28,49 @@
         -- Report a note at the beginning of stimulus process
         report "Stimulus process started";
 
-        -- First test case
-        s_b <= "BCD_OF_YOUR_SECOND_LAST_ID_DIGIT"; -- Such as "0101" if ID = xxxx56
-        s_a <= "BCD_OF_YOUR_LAST_ID_DIGIT";        -- Such as "0110" if ID = xxxx56
+        -- Test case of ID
+        s_b <= "1001"; -- 240 198 - BCD of 9
+        s_a <= "1000"; -- 240 198 - BCD of 8
         wait for 100 ns;
-        -- Expected output
-        assert ((s_B_greater_A = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_equals_A  = 'WRITE_CORRECT_VALUE_HERE') and
-                (s_B_less_A    = 'WRITE_CORRECT_VALUE_HERE'))
-        -- If false, then report an error
-        report "Input combination COMPLETE_THIS_TEXT FAILED" severity error;
+        
+        -- ... and its expected outputs        
+        assert ((s_B_greater_A = '1') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '0'))
+                
+        -- If true, then do not report anything
+        -- If false, then report the following error
 
+report "Input combination b=1001, a=1000 FAILED" severity error;
+
+        -- Test case 2
+        s_b <= "1001";
+        s_a <= "1001";
+        wait for 100 ns;
+         
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '1') and
+                (s_B_less_A    = '0'))
+                       
+report "Input combination b=1001, a=1001 FAILED" severity error;
+
+        -- Test case 3
+        s_b <= "1000";
+        s_a <= "1100";
+        wait for 100 ns;
+         
+        assert ((s_B_greater_A = '0') and
+                (s_B_equals_A  = '0') and
+                (s_B_less_A    = '1'))
+                       
+report "Input combination b=1000, a=1100 FAILED" severity error;
+       
         -- Report a note at the end of stimulus process
         report "Stimulus process finished";
-        wait;
+        wait; -- Data generation process is suspended forever
     end process p_stimulus;
 ```
 
 2. Link to your public EDA Playground example:
 
-   [https://www.edaplayground.com/...](https://www.edaplayground.com/...)
+   [https://www.edaplayground.com/x/Fpf2...]
