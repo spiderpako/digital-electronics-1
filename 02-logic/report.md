@@ -6,15 +6,15 @@
 
    Greater than:
 
-   ![K-maps](images/kmap_empty.png)
+   02-logic/kmap_greater than.png
 
    Less than:
 
-   ![K-maps](images/kmap_empty.png)
+   02-logic/kmap_less than.png
 
 2. Mark the largest possible implicants in the K-map and according to them, write the equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
+   ![IMG_20230219_121839](https://user-images.githubusercontent.com/95495159/219946892-02645f8c-8d7b-42a9-ab00-810049cdbee8.jpg)
 
 ### 4-bit comparator
 
