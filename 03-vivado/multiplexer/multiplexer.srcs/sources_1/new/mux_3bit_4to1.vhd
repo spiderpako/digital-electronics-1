@@ -43,11 +43,10 @@ end mux_3bit_4to1;
 architecture Behavioral of mux_3bit_4to1 is
 
 begin
-
-with addr_i select
-    f_o <= a_i when "00",  -- If addr_i = "000" then y_o = a_i
-           b_i when "01",
-           c_i when "10",
-           d_i when others; -- All other combinations
+-- If addr_i = "000" then y_o = a_i
+    f_o <= a_i when (sel_i = "00") else
+           b_i when (sel_i = "01") else
+           c_i when (sel_i = "10") else
+           d_i; -- All other combinations
 
 end Behavioral;
