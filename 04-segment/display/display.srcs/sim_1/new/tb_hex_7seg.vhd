@@ -69,6 +69,74 @@ begin
       sig_hex <= std_logic_vector(to_unsigned(ii, 4));
       wait for 50 ns;
 
+    case sig_hex is
+    
+    when "0000" => assert sig_seg ="0000001"
+    report "Input combination 0000 failed"
+    severity error;
+    
+    when "0001" => assert sig_seg ="1001111"
+    report "Input combination 0001 failed"
+    severity error;
+    
+    when "0010" => assert sig_seg ="0010010"
+    report "Input combination 0010 failed"
+    severity error;
+    
+    when "0011" => assert sig_seg ="0000110"
+    report "Input combination 0011 failed"
+    severity error;
+    
+    when "0100" => assert sig_seg ="1001100" --4
+    report "Input combination 0100 failed"
+    severity error;
+    
+    when "0101" => assert sig_seg ="0100100"
+    report "Input combination 0101 failed"
+    severity error;
+    
+    when "0110" => assert sig_seg ="0100000"
+    report "Input combination 0110 failed"
+    severity error;
+    
+    when "0111" => assert sig_seg ="0001111" --7
+    report "Input combination 0111 failed"
+    severity error;
+    
+    when "1000" => assert sig_seg ="0000000"
+    report "Input combination 1000 failed"
+    severity error;
+    
+    when "1001" => assert sig_seg ="0000100"
+    report "Input combination 1001 failed" --9
+    severity error;
+    
+    when "1010" => assert sig_seg ="0001000"
+    report "Input combination 1010 failed"
+    severity error;
+    
+    when "1011" => assert sig_seg ="1100000"
+    report "Input combination 1011 failed" --b
+    severity error;
+    
+    when "1100" => assert sig_seg ="0110001"
+    report "Input combination 1100 failed"
+    severity error;
+    
+    when "1101" => assert sig_seg ="1000010" --d
+    report "Input combination 1101 failed"
+    severity error;
+    
+    when "1110" => assert sig_seg ="0110000"
+    report "Input combination 1110 failed"
+    severity error;
+    
+    when "1111" => assert sig_seg ="0111000" --F
+    report "Input combination 1111 failed"
+    severity error;
+    
+    end case;
+    
     end loop;
 
     report "Stimulus process finished";
