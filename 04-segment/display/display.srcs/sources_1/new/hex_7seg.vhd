@@ -117,7 +117,7 @@ begin
         when "1110" =>
           seg <= "0110000"; --E
           
-        when "1111" =>
+        when others =>
           seg <= "0111000"; --F
 
 

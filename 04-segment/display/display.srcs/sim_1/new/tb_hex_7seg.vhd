@@ -131,12 +131,12 @@ begin
     report "Input combination 1110 failed"
     severity error;
     
-    when "1111" => assert sig_seg ="0111000" --F
+    when others => assert sig_seg ="0111000" --F
     report "Input combination 1111 failed"
     severity error;
     
     end case;
-    
+    wait for 150 ns;
     end loop;
 
     report "Stimulus process finished";
