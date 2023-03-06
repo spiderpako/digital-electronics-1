@@ -21,6 +21,7 @@
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.numeric_std.all;
 
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
@@ -41,8 +42,8 @@ entity top is
            CE : out STD_LOGIC;
            CF : out STD_LOGIC;
            CG : out STD_LOGIC;
-           AN : out STD_LOGIC_VECTOR (7 downto 0);
-           BTNC : in STD_LOGIC);
+           AN : out STD_LOGIC_VECTOR (7 downto 0));
+
 end top;
 
 architecture behavioral of top is
@@ -55,7 +56,6 @@ begin
 
   hex2seg : entity work.hex_7seg
     port map (
-      blank  => BTNC,
       hex    => SW,
       seg(6) => CA,
       seg(5) => CB,
@@ -67,7 +67,7 @@ begin
     );
 
   -- Connect one common anode to 3.3V
-  AN <= b"1111_0111";
+  AN <= b"0111_1110";
 
   -- Display input value on LEDs
   LED(3 downto 0) <= SW;

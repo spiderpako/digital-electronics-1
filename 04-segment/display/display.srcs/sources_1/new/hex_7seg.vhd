@@ -33,12 +33,11 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity hex_7seg is
 
-    Port (blank : in STD_LOGIC;
-         hex : in STD_LOGIC_VECTOR (3 downto 0);
+    Port (hex : in STD_LOGIC_VECTOR (3 downto 0);
          seg : out STD_LOGIC_VECTOR (6 downto 0)  
           );
 
-end entity hex_7seg;
+end hex_7seg;
 
 
 architecture behavioral of hex_7seg is
@@ -62,13 +61,9 @@ begin
   -- Display is clear/blank if signal blank = 1.
   --------------------------------------------------------
 
-  p_7seg_decoder : process (blank, hex) is
+  p_7seg_decoder : process (hex) is
 
   begin
-
-    if (blank = '1') then
-      seg <= "1111111";     -- Blanking display
-    else
 
       case hex is
 
@@ -122,8 +117,6 @@ begin
 
 
       end case;
-
-    end if;
 
   end process p_7seg_decoder;
 
