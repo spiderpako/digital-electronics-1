@@ -1,4 +1,4 @@
-# Lab 4: INSERT_YOUR_FIRSTNAME INSERT_YOUR_LASTNAME
+# Lab 4: Jakub Raimr
 
 ### LED(7:4) indicators
 
@@ -15,7 +15,7 @@
    | 6 | 0110 | 0 | 0 | 0 | 0 |
    | 7 | 0111 | 0 | 0 | 1 | 0 |
    | 8 | 1000 | 0 | 0 | 0 | 1 |
-   | 9 | 1001 | 0 | 1 | 1 | 0 |
+   | 9 | 1001 | 0 | 0 | 1 | 0 |
    | A | 1010 | 0 | 1 | 0 | 0 |
    | b | 1011 | 0 | 1 | 1 | 0 |
    | C | 1100 | 0 | 1 | 0 | 0 |
@@ -45,4 +45,6 @@ LED(7) <=  '1' when SW = ("0001" or "0010" or "0100" or "1000") else '0';
 
 3. Screenshot with simulated time waveforms for LED(7:4). Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+<img width="665" alt="Snímek obrazovky 2023-03-06 190453" src="https://user-images.githubusercontent.com/95495159/223193763-80d60300-7d70-41b5-bab5-a1edf82f9f27.png">
+
+
