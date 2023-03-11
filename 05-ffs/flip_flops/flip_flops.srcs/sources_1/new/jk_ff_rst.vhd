@@ -44,7 +44,7 @@ architecture Behavioral of jk_ff_rst is
 signal sig_q : std_logic;
 begin
 
- p_d_ff_rst : process (clk) is
+ p_jk_ff_rst : process (clk) is
     begin
         if rising_edge(clk) then
             if (j = '0' and k ='0') then 
@@ -59,7 +59,7 @@ begin
                 end if;
         end if;
     
-    end process p_d_ff_rst;
+    end process p_jk_ff_rst;
     
 q     <= sig_q; -- Output ports are permanently connected to local signal
 q_bar <= not sig_q;
