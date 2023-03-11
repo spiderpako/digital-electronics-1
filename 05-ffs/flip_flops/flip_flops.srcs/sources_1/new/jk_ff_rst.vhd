@@ -46,9 +46,9 @@ begin
 
  p_d_ff_rst : process (clk) is
     begin
-        if rising_edge(clk) then  -- Synchronous process
+        if rising_edge(clk) then
             if (j = '0' and k ='0') then 
-                sig_q <= sig_q; -- high-active reset
+                sig_q <= sig_q;
                         
         elsif (j = '0' and k = '1') then
                 sig_q <= j;
