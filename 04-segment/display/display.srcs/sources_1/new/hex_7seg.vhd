@@ -34,7 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity hex_7seg is
 
     Port (hex : in STD_LOGIC_VECTOR (3 downto 0);
-         seg : out STD_LOGIC_VECTOR (6 downto 0)  
+         seg : out STD_LOGIC_VECTOR (6 downto 0);  
+         blank : in std_logic
           );
 
 end hex_7seg;
@@ -64,7 +65,10 @@ begin
   p_7seg_decoder : process (hex) is
 
   begin
-
+ 
+ if (blank = '1') then
+      seg <= "1111111";    
+ else     
       case hex is
 
         when "0000" =>
@@ -117,6 +121,8 @@ begin
 
 
       end case;
+
+end if;
 
   end process p_7seg_decoder;
 
